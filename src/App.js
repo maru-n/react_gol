@@ -21,7 +21,6 @@ class GoL extends SystemModel {
     update() {
         const width = this.width
         const height = this.height
-
         for(let x = 0; x < width; x++) {
             for (let y = 0; y < height; y++) {
                 const nw = this.cells[(x-1+width)%width][(y-1+height)%height];
@@ -64,6 +63,7 @@ let draw_gol = function(canvas, gol) {
     }
     ctx.putImageData(imgData, 0, 0);
 }
+
 
 let gol = new GoL(600, 400)
 
