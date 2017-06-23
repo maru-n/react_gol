@@ -70,6 +70,10 @@ CanvasVisualizer.propTypes = {
     height: PropTypes.number.isRequired,
 };
 
+let button_style = {
+    margin: "0px 12px"
+}
+
 export class PlayButton extends Component {
     constructor(props) {
         super(props);
@@ -90,7 +94,7 @@ export class PlayButton extends Component {
         })
     }
     render() {
-        return <FlatButton icon={this.state.is_pause ? <Pause /> : <PlayArrow />} onClick={this.handleClick} />
+        return <FlatButton backgroundColor="#dddddd" icon={this.state.is_pause ? <Pause /> : <PlayArrow />} onClick={this.handleClick} style={button_style} />
     }
 }
 
@@ -108,6 +112,6 @@ export class ResetButton extends Component {
         this.props.system.callUpdateListener()
     }
     render() {
-        return <FlatButton icon={<Replay />} onClick={this.handleClick} />
+        return <FlatButton backgroundColor="#dddddd" icon={<Replay />} onClick={this.handleClick} style={button_style} />
     }
 }

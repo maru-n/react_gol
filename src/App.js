@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
-import './App.css';
-
-import {SystemModel, CanvasVisualizer, PlayButton, ResetButton} from './libs.js'
-
+import React from 'react';
+import {SystemModel, CanvasVisualizer, PlayButton, ResetButton} from './libs/libs.js'
+import FlatButton from 'material-ui/FlatButton';
 
 class GoL extends SystemModel {
     constructor(width, height) {
@@ -70,7 +68,7 @@ let draw_gol = function(canvas, gol) {
 
 let gol = new GoL(600, 400)
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return (
             <div className="App">
