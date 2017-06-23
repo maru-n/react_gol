@@ -1,6 +1,5 @@
 import React from 'react';
 import {SystemModel, CanvasVisualizer, PlayButton, ResetButton} from './libs/libs.js'
-import FlatButton from 'material-ui/FlatButton';
 
 class GoL extends SystemModel {
     constructor(width, height) {
